@@ -33,8 +33,8 @@ function App() {
                 <section id="core-concepts">
                     <h2>Core Concepts</h2>
                     <ul>
-                        {CORE_CONCEPTS.map((conceptItem, key) => (
-                            <CoreConcepts {...conceptItem} key={key} />
+                        {CORE_CONCEPTS.map((conceptItem, index) => (
+                            <CoreConcepts {...conceptItem} key={index} />
                         ))}
                     </ul>
                 </section>
@@ -64,18 +64,6 @@ function App() {
                         >
                             States
                         </TabButton>
-
-                        {/* ERROR */}
-
-                        {/* {CORE_CONCEPTS.map((conceptItem, index) => (
-                            <TabButton
-                                isSelected={selectedTopic === conceptItem.title}
-                                onSelect={() => handleClick(conceptItem.title)}
-                                key={index}
-                            >
-                                JSX
-                            </TabButton>
-                        ))} */}
                     </menu>
                     {tabContent}
 
